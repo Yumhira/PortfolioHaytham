@@ -1,0 +1,462 @@
+/* ================= PARCOURS (ARBRE + BRANCHES) ================= */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-left: 1rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-node {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.node-dot {
+  position: absolute;
+  left: -2.45rem;
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-main);
+  border: 3px solid var(--accent);
+}
+
+.node-content {
+  background: var(--bg-surface);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.node-content:hover {
+  border-color: var(--text-secondary);
+  transform: translateY(-2px);
+}
+
+.node-date {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.node-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.node-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* ================= ACCORDÉON EXPÉRIENCES (BRANCHES) ================= */
+.timeline-branch {
+  position: relative;
+  margin-top: 1rem;
+  padding-left: 3rem;
+}
+
+.timeline-branch::before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: -1rem;
+  width: 2.5rem;
+  height: 3rem;
+  border-left: 2px solid var(--border);
+  border-bottom: 2px solid var(--border);
+  border-bottom-left-radius: 12px;
+}
+
+.job-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.job-card:hover {
+  border-color: var(--text-secondary);
+}
+
+.job-header {
+  cursor: pointer;
+}
+
+.job-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.job-company {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.job-role {
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.job-chevron {
+  color: var(--text-primary);
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--text-secondary);
+  border-radius: 50%;
+  background: var(--bg-surface-hover);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.job-chevron::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.job-header:hover .job-chevron {
+  color: #fff;
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.job-card.active .job-chevron::before {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.job-card.active .job-chevron {
+  color: #fff;
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.job-meta {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.job-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.job-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, margin-top 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.job-card.active .job-body {
+  max-height: 800px;
+  margin-top: 1.5rem;
+  opacity: 1;
+}
+
+.job-tasks {
+  list-style: none;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.job-tasks li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.6;
+}
+
+.job-tasks li::before {
+  content: "•";
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.job-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.job-tech-pill {
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ================= CERTIFICATIONS (UI PREMIUM) ================= */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.cert-card {
+  background: linear-gradient(145deg, var(--bg-surface), var(--bg-surface-hover));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+  border-color: var(--accent-soft-border);
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+/* Le conteneur pour la vraie image du badge */
+.cert-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: contain;
+  background: var(--surface-tint);
+  padding: 4px;
+  border: 1px solid var(--border);
+}
+
+.cert-icon {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent-light);
+  background: var(--surface-tint);
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.proj-btn:hover, .btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+}
+
+.cert-badge {
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.cert-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.cert-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.cert-btn {
+  margin-top: auto;
+  background: var(--accent-soft);
+  color: var(--accent-light);
+  border: 1px solid var(--accent-soft-border);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  text-align: center;
+  font-family: inherit;
+}
+
+.cert-badge, .proj-tech {
+    background: var(--accent-soft);
+    color: var(--accent-light);
+    border: 1px solid var(--accent-soft-border);
+}
+
+.cert-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 5px 16px var(--accent-soft);
+}
+
+/* ================= PROJETS ================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* Essentiel pour que l'image respecte les coins arrondis */
+  transition: var(--transition);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--text-secondary);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image de couverture du projet */
+.project-image {
+  width: 100%;
+  height: 180px;
+  /* Hauteur fixe pour un alignement parfait de toutes les cartes */
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+}
+
+/* S'assurer que le contenu pousse le bouton vers le bas */
+.project-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.proj-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: var(--text-primary);
+}
+
+.proj-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Badges technologiques */
+.proj-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.proj-tech {
+  background: transparent;
+  border: 1px solid var(--border);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Nouveau bouton d'action centré */
+.proj-btn {
+  margin-top: auto;
+  /* Pousse le bouton tout en bas */
+  background: var(--accent-soft);
+  /* Fond bleu très léger */
+  border: 1px solid var(--accent-soft-border);
+  color: var(--accent);
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.proj-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+  transform: translateY(-2px);
+}

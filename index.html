@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haytham Clément — Portfolio IT</title>
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon-haytham.png">
+    <!-- Google Fonts : Inter pour une lecture très douce et lisible -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- Sidebar (Générée par JS) -->
+    <aside id="sidebar" class="sidebar"></aside>
+
+    <!-- Contenu Principal -->
+    <main class="main-content">
+        <!-- En-tête profil (Généré par JS) -->
+        <header id="profile-header" class="profile-header"></header>
+
+        <!-- Conteneur des pages dynamiques -->
+        <div id="pages-container" class="pages-container">
+            <!-- Les sections s'injecteront ici -->
+        </div>
+    </main>
+</div>
+
+<!-- Modale Globale pour PDF et détails -->
+<div id="global-modal" class="modal-overlay hidden">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-label="Aperçu du document">
+        <button id="close-modal" class="close-btn" type="button" aria-label="Fermer">&times;</button>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/render.js"></script>
+<script src="js/interactions.js"></script>
+<script src="js/veille.js"></script>
+</body>
+</html>
