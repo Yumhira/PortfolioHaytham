@@ -5,8 +5,8 @@ const portfolioData = {
     photo: "assets/Haytham.png",
     role: "Technicien Support & Infrastructure",
     bio: "Étudiant en 2ème année de BTS SIO (SISR) à l'Institut F2I, je poursuis mon cursus avec pour objectif de devenir consultant en cybersécurité.",
-    location: "Gentilly, France", // Ajout de la localisation
-    socials: [                    // Ajout des réseaux
+    location: "Gentilly, France",
+    socials: [
       { name: "LinkedIn", icon: "fa-linkedin-in", url: "https://www.linkedin.com/in/haythamclement" },
       { name: "GitHub", icon: "fa-github", url: "https://github.com/Yumhira" }
     ]
