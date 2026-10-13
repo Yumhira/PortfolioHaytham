@@ -130,7 +130,7 @@ const portfolioData = {
     },
     {
       title: "eeBiscus",
-      image: "assets/logo/EEBISCUS.png",
+      image: "assets/logo/eeBiscus.png",
       desc: "Plateforme e-commerce fonctionnelle développée en équipe pour le client Neoherba.",
       tech: ["Angular", "Java API"],
       pdf: "docs/eebiscus.pdf"
