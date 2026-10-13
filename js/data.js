@@ -76,7 +76,7 @@ const portfolioData = {
         title: "Alternant Développeur Fullstack",
         company: "Wineriz",
         location: "Paris 75",
-        logo: "assets/logo/Wineriz.jpg",
+        logo: "assets/logo/wineriz.jpg",
         tasks: [
           "Développement complet d'une solution métier dédiée aux vignerons en utilisant la stack Vue.js, Nest.js et MongoDB.",
           "Gestion de l'architecture Cloud avec configuration du stockage et des redirections via les Buckets AWS S3.",
