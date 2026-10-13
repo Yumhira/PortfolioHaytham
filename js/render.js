@@ -292,10 +292,10 @@ function renderPages() {
                     </ul>
 
                     <img 
-                        src="assets/veille/DevOps.png" 
+                        src="assets/Veille/DevOps.png" 
                         alt="Schéma DevOps CI/CD" 
                         class="veille-image" 
-                        onclick="openModal('Architecture CI/CD', 'assets/veille/DevOps.png')"
+                        onclick="openModal('Architecture CI/CD', 'assets/Veille/DevOps.png')"
                         title="Cliquez pour agrandir"
                     >
 
@@ -323,10 +323,10 @@ function renderPages() {
 
                     <!-- L'IMAGE DU DEVSECOPS QUI S'AGRANDIT AU CLIC -->
                     <img 
-                        src="assets/veille/DevSecOps.png" 
+                        src="assets/Veille/DevSecOps.png" 
                         alt="Schéma DevSecOps" 
                         class="veille-image" 
-                        onclick="openModal('Architecture DevSecOps', 'assets/veille/DevSecOps.png')"
+                        onclick="openModal('Architecture DevSecOps', 'assets/Veille/DevSecOps.png')"
                         title="Cliquez pour agrandir"
                     >
 
@@ -347,10 +347,10 @@ function renderPages() {
 
                     <!-- L'IMAGE SCRUM QUI S'AGRANDIT AU CLIC -->
                     <img 
-                        src="assets/veille/Scrum1.png" 
+                        src="assets/Veille/Scrum1.png" 
                         alt="Schéma Méthodologie Scrum" 
                         class="veille-image" 
-                        onclick="openModal('Méthodologie Scrum', 'assets/veille/Scrum1.png')"
+                        onclick="openModal('Méthodologie Scrum', 'assets/Veille/Scrum1.png')"
                         title="Cliquez pour agrandir"
                     >
 
@@ -360,10 +360,10 @@ function renderPages() {
 
                     <!-- DEUXIÈME IMAGE DU BLOC (CYCLE DE VIE) QUI S'AGRANDIT AU CLIC -->
                     <img 
-                        src="assets/veille/Scrum2.png" 
+                        src="assets/Veille/Scrum2.png" 
                         alt="Schéma Cycle de vie d'une itération" 
                         class="veille-image" 
-                        onclick="openModal(&quot;Cycle de vie d'une itération&quot;, 'assets/veille/Scrum2.png')"
+                        onclick="openModal(&quot;Cycle de vie d'une itération&quot;, 'assets/Veille/Scrum2.png')"
                         title="Cliquez pour agrandir"
                     >
 
